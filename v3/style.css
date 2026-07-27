@@ -214,9 +214,9 @@ strong{font-weight:600;color:var(--ink)}
 .diet-filter button:hover{border-color:var(--gold);color:var(--gold)}
 .diet-filter button.on{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
 /* Build-Your-Plate theming (Heritage) */
-#plate-builder{--pb-accent:#A8792F;--pb-on:#1a1206;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--ink);--pb-soft:var(--soft);--pb-line:var(--line);--pb-plate:#F5EBD6;--pb-serif:var(--disp)}
-:root[data-theme="dark"] #plate-builder{--pb-accent:#C79A46;--pb-plate:#E8DCC2}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #plate-builder{--pb-accent:#C79A46;--pb-plate:#E8DCC2}}
+#plate-builder,#order-app{--pb-accent:#A8792F;--pb-on:#1a1206;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--ink);--pb-soft:var(--soft);--pb-line:var(--line);--pb-plate:#F5EBD6;--pb-serif:var(--disp)}
+:root[data-theme="dark"] #plate-builder,#order-app{--pb-accent:#C79A46;--pb-plate:#E8DCC2}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #plate-builder,#order-app{--pb-accent:#C79A46;--pb-plate:#E8DCC2}}
 @keyframes sr-kenburns{0%{transform:scale(1.03)}100%{transform:scale(1.11)}}
 @media(prefers-reduced-motion:no-preference){.hero-media img,.phero .m img{animation:sr-kenburns 24s ease-in-out infinite alternate}}
 /* menu item thumbnails */

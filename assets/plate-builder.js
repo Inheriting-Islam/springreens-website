@@ -4,7 +4,7 @@
   if (!root) return;
   var BASE = root.getAttribute('data-base') || 'assets/';
   var IMG = BASE + 'img/';
-  var ORDER = 'https://www.springreens.com/popmenu-order';
+  var ORDER = 'https://www.springreens.com/popmenu-order/springreens/menus/weekly-menu';
 
   // real Springreens items → photo + dietary
   var PROTEINS = [
