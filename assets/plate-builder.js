@@ -8,12 +8,12 @@
 
   // real Springreens items → photo + dietary
   var PROTEINS = [
-    { id: 'baked',   name: 'Halal Baked Chicken', img: '069', diet: ['halal'] },
-    { id: 'fried',   name: 'Halal Fried Chicken',  img: '031', diet: ['halal'] },
-    { id: 'ribs',    name: 'Halal Beef Ribs',      img: '036', diet: ['halal'] },
-    { id: 'wings',   name: 'Halal Party Wings',    img: '041', diet: ['halal'] },
-    { id: 'shrimp',  name: 'Shrimp Creole',        img: '010', diet: ['halal', 'seafood'] },
-    { id: 'whiting', name: 'Wild-Caught Whiting',  img: '029', diet: ['seafood'] }
+    { id: 'baked',   name: 'Halal Baked Chicken', img: '069-p', diet: ['halal'] },
+    { id: 'fried',   name: 'Halal Fried Chicken',  img: '031-p', diet: ['halal'] },
+    { id: 'ribs',    name: 'Halal Beef Ribs',      img: '036-p', diet: ['halal'] },
+    { id: 'wings',   name: 'Halal Party Wings',    img: '041-p', diet: ['halal'] },
+    { id: 'shrimp',  name: 'Shrimp Creole',        img: '010-p', diet: ['halal', 'seafood'] },
+    { id: 'whiting', name: 'Wild-Caught Whiting',  img: '029-p', diet: ['seafood'] }
   ];
   var SIDES = [
     { id: 'mac',    name: 'Mac & Cheese',      img: '067', diet: ['veg'] },
@@ -22,7 +22,7 @@
     { id: 'rice',   name: 'Turmeric Rice',     img: '063', diet: ['vegan'] },
     { id: 'squash', name: 'Squash & Zucchini', img: '047', diet: ['vegan'] },
     { id: 'beans',  name: 'Green Beans',       img: '038', diet: ['vegan'] },
-    { id: 'greens', name: 'Southern Greens',   img: '019', diet: ['vegan'] }
+    { id: 'greens', name: 'Southern Greens',   img: 'greens', diet: ['vegan'] }
   ];
   var MAX = 4;
   var state = { protein: null, sides: [], size: 'large' };
