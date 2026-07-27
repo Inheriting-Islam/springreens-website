@@ -11,7 +11,7 @@
   var cur = 0, root = dir;
   if (/\/v2\/$/.test(dir))      { cur = 1; root = dir.replace(/v2\/$/, ''); }
   else if (/\/v3\/$/.test(dir)) { cur = 2; root = dir.replace(/v3\/$/, ''); }
-  var core = ['index.html', 'menu.html', 'catering.html', ''];
+  var core = ['index.html','menu.html','catering.html','about.html','events.html','gift-cards.html','vip.html','order.html','signin.html',''];
   function target(base) {
     var f = (core.indexOf(file) >= 0) ? file : 'index.html';
     if (f === '') f = 'index.html';
