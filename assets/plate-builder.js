@@ -84,10 +84,10 @@
 
   function priceHTML() {
     var n = state.sides.length, sizeName = state.size === 'large' ? 'Large' : 'Small';
-    if (state.protein) {
-      return '<div class="pb-price">Order online for pricing<small>' + sizeName + ' plate · ' + state.protein.name + ' + ' + n + ' side' + (n === 1 ? '' : 's') + '</small></div>';
-    }
     var price = state.size === 'large' ? '$15' : '$8';
+    if (state.protein) {
+      return '<div class="pb-price">' + price + '<span class="pb-plus"> + protein</span><small>' + sizeName + ' plate · ' + n + ' side' + (n === 1 ? '' : 's') + ' + ' + state.protein.name + ' · halal protein priced à la carte</small></div>';
+    }
     return '<div class="pb-price">' + price + '<small>' + sizeName + ' vegetable plate · ' + n + '/' + MAX + ' sides · vegan-friendly</small></div>';
   }
 
@@ -97,10 +97,11 @@
     if (t.dataset.act === 'order') {
       var szN = state.size === 'large' ? 'Large' : 'Small';
       var hasP = !!state.protein;
-      var it = { n: (hasP ? state.protein.name : 'Vegetable') + ' Plate',
+      var sidesTxt = state.sides.length ? state.sides.map(function (s) { return s.name; }).join(', ') : 'no sides';
+      var it = { n: szN + ' Plate' + (hasP ? ' + ' + state.protein.name : ''),
                  img: hasP ? state.protein.img : (state.sides[0] ? state.sides[0].img : '057'),
-                 label: szN + ' plate · ' + (state.sides.length ? state.sides.map(function (s) { return s.name; }).join(', ') : 'no sides') };
-      if (hasP) it.market = true; else it.val = state.size === 'large' ? 15 : 8;
+                 label: sidesTxt + (hasP ? ' · protein à la carte' : ''),
+                 val: state.size === 'large' ? 15 : 8 };
       if (window.SRCart) SRCart.add(it);
       return;
     }

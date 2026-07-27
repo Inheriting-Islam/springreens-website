@@ -70,3 +70,5 @@
 .pb-opt.sel .nm::after{content:" ✓";color:var(--pb-accent);font-weight:900}
 .pb-opt[disabled]{opacity:.4;cursor:not-allowed;transform:none}
 .pb-hint{font-size:.8rem;color:var(--pb-soft);margin-top:12px}
+
+.pb-price .pb-plus{font-size:.38em;font-weight:800;opacity:.72;letter-spacing:.01em;vertical-align:middle}
