@@ -219,3 +219,9 @@ strong{font-weight:600;color:var(--ink)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #plate-builder{--pb-accent:#C79A46;--pb-plate:#E8DCC2}}
 @keyframes sr-kenburns{0%{transform:scale(1.03)}100%{transform:scale(1.11)}}
 @media(prefers-reduced-motion:no-preference){.hero-media img,.phero .m img{animation:sr-kenburns 24s ease-in-out infinite alternate}}
+/* menu item thumbnails */
+.mrow{display:flex;gap:15px;align-items:flex-start}
+.mrow-b{flex:1;min-width:0}
+.mrow .mthumb{width:58px;height:58px;border-radius:3px;object-fit:cover;flex:none;border:1px solid var(--line2);box-shadow:var(--shadow);background:var(--deep2);margin-top:3px}
+.mrow .mthumb.ph{display:grid;place-items:center;background:color-mix(in srgb,var(--gold) 9%,var(--surface))}
+.mrow .mthumb.ph svg{width:22px;height:22px;color:color-mix(in srgb,var(--gold) 55%,transparent)}

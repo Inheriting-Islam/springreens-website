@@ -451,3 +451,7 @@ strong{font-weight:800}
 /* signature hero motion */
 @keyframes sr-kenburns{0%{transform:scale(1.04)}100%{transform:scale(1.12)}}
 @media(prefers-reduced-motion:no-preference){.hero-media img{animation:sr-kenburns 22s ease-in-out infinite alternate}}
+
+/* menu placeholder thumb for photo-less items */
+.mi-thumb.ph{display:grid;place-items:center;background:color-mix(in srgb,var(--brand) 9%,var(--surface-2));border:1px solid var(--line)}
+.mi-thumb.ph svg{width:26px;height:26px;color:color-mix(in srgb,var(--brand-bright) 45%,transparent)}
