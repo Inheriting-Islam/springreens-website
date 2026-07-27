@@ -19,6 +19,7 @@
 
 <link rel="preload" href="assets/site.css" as="style">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/plate.css">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org","@type":"Restaurant",
@@ -198,6 +199,18 @@
     <div class="center mt-l reveal">
       <a class="btn btn-primary btn-lg" href="menu.html" style="--_bg:var(--brand);--_fg:#fff">See the Full Menu</a>
     </div>
+  </div>
+</section>
+
+<!-- BUILD YOUR PLATE -->
+<section class="section sand">
+  <div class="wrap wrap-wide">
+    <div class="section-head center reveal">
+      <p class="eyebrow">Make it yours</p>
+      <h2>Build your plate</h2>
+      <p class="lead">Pick a halal protein and your sides — watch it come together, then order it. Small plate $8 or large $15, four sides either way.</p>
+    </div>
+    <div id="plate-builder" class="reveal" data-base="assets/" style="margin-top:clamp(28px,4vw,48px)"></div>
   </div>
 </section>
 
@@ -396,6 +409,7 @@
 
 <script src="assets/site.js" defer></script>
 <script src="assets/switcher.js" defer></script>
+<script src="assets/plate-builder.js" defer></script>
 <script src="assets/vip-popin.js" defer></script>
 </body>
 </html>
