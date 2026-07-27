@@ -203,7 +203,7 @@ strong{font-weight:700}
 .pkg h3{font-size:1.24rem}.pkg p{color:var(--soft);font-size:.92rem}
 .pkg .m{margin-top:auto;padding-top:10px;border-top:1px solid var(--line);font-weight:700;color:var(--green);font-size:.85rem}
 .pkg.hot{background:var(--green);color:#fff;border-color:transparent}.pkg.hot .pic{background:rgba(255,255,255,.16);color:#fff}.pkg.hot h3{color:#fff}.pkg.hot p{color:rgba(255,255,255,.85)}.pkg.hot .m{color:var(--lemon);border-top-color:rgba(255,255,255,.2)}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+.gal{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
 .gal a{overflow:hidden;border-radius:16px;background:var(--sand)}.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.gal a:hover img{transform:scale(1.07)}
 .gal .tall{grid-row:span 2}.gal .wide{grid-column:span 2}
 .formc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(26px,4vw,46px);box-shadow:var(--shadow-lg)}
