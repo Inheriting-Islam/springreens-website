@@ -434,3 +434,11 @@ strong{font-weight:800}
 .signin-link{display:inline-flex;align-items:center;font-weight:700;font-size:.9rem;padding:.5em .8em;border-radius:999px;color:inherit;opacity:.82;transition:opacity .2s}
 .signin-link:hover{opacity:1}
 @media(max-width:860px){.signin-link{display:none}}
+
+/* dietary filter */
+.diet-wrap{padding-top:6px}
+.diet-filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:16px 0}
+.diet-filter .diet-lbl{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--text-faint);margin-right:2px}
+.diet-filter button{font-family:var(--font-body);font-weight:700;font-size:.86rem;padding:.5em 1em;border-radius:999px;border:1.5px solid var(--line-strong);background:transparent;color:var(--text-soft);cursor:pointer;transition:.2s}
+.diet-filter button:hover{border-color:var(--brand);color:var(--brand)}
+.diet-filter button.on{background:var(--brand);color:#fff;border-color:var(--brand)}

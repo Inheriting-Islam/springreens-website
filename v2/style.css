@@ -225,3 +225,9 @@ strong{font-weight:700}
 @media(max-width:560px){.dish-grid,.pkgs{grid-template-columns:1fr}.gal .wide{grid-column:span 1}.hero-cta .btn{flex:1}}
 
 .signin-link{display:inline-flex;align-items:center;font-weight:600;font-size:.86rem;padding:.5em .8em;color:inherit;opacity:.85;transition:opacity .2s}.signin-link:hover{opacity:1}@media(max-width:860px){.signin-link{display:none}}
+.diet-wrap{padding-top:6px}
+.diet-filter{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px 0}
+.diet-filter .diet-lbl{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-right:2px}
+.diet-filter button{font-family:var(--body);font-weight:600;font-size:.86rem;padding:.5em 1em;border-radius:999px;border:1.6px solid var(--line2);background:transparent;color:var(--soft);cursor:pointer;transition:.2s}
+.diet-filter button:hover{border-color:var(--green);color:var(--green)}
+.diet-filter button.on{background:var(--green);color:var(--on-green);border-color:var(--green)}

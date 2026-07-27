@@ -117,3 +117,42 @@
     if (yr) yr.textContent = new Date().getFullYear();
   });
 })();
+
+/* Menu dietary filter + newsletter (shared across all designs) */
+document.addEventListener('DOMContentLoaded', function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+  if (chips.length) {
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-diet]'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.menu-section, .msec'));
+    function apply(f) {
+      chips.forEach(function (x) {
+        var on = x.getAttribute('data-filter') === f;
+        x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      items.forEach(function (it) {
+        var d = ' ' + (it.getAttribute('data-diet') || '') + ' ';
+        it.style.display = (f === 'all' || d.indexOf(' ' + f + ' ') >= 0) ? '' : 'none';
+      });
+      sections.forEach(function (s) {
+        var its = s.querySelectorAll('[data-diet]');
+        if (!its.length) return;
+        var any = false;
+        Array.prototype.forEach.call(its, function (v) { if (v.style.display !== 'none') any = true; });
+        s.style.display = any ? '' : 'none';
+      });
+    }
+    chips.forEach(function (c) { c.addEventListener('click', function () { apply(c.getAttribute('data-filter')); }); });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('form[data-newsletter]'), function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var inp = f.querySelector('input[type=email]');
+      var email = inp ? inp.value.trim() : '';
+      var to = f.getAttribute('data-to') || 'inheritingislam@gmail.com';
+      window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent('Springreens — newsletter signup') +
+        '&body=' + encodeURIComponent('Please add me to the Springreens list: ' + email);
+      var ok = f.querySelector('.nl-ok');
+      if (ok) { Array.prototype.forEach.call(f.querySelectorAll('.nl-row'), function (x) { x.style.display = 'none'; }); ok.style.display = 'block'; }
+    });
+  });
+});
