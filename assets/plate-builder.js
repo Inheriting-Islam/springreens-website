@@ -61,7 +61,7 @@
           }).join('') + '</div>' +
           priceHTML() +
           '<div class="pb-cta">' +
-            '<a class="pb-btn" href="' + ORDER + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>Order this plate</a>' +
+            '<button class="pb-btn" type="button" data-act="order"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.4 12.3a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>Add plate to order</button>' +
             '<button class="pb-btn ghost" type="button" data-act="clear">Start over</button>' +
           '</div>' +
         '</div>' +
@@ -94,6 +94,16 @@
   root.addEventListener('click', function (e) {
     var t = e.target.closest('[data-kind],[data-size],[data-act]');
     if (!t) return;
+    if (t.dataset.act === 'order') {
+      var szN = state.size === 'large' ? 'Large' : 'Small';
+      var hasP = !!state.protein;
+      var it = { n: (hasP ? state.protein.name : 'Vegetable') + ' Plate',
+                 img: hasP ? state.protein.img : (state.sides[0] ? state.sides[0].img : '057'),
+                 label: szN + ' plate · ' + (state.sides.length ? state.sides.map(function (s) { return s.name; }).join(', ') : 'no sides') };
+      if (hasP) it.market = true; else it.val = state.size === 'large' ? 15 : 8;
+      if (window.SRCart) SRCart.add(it);
+      return;
+    }
     if (t.dataset.act === 'clear') { state = { protein: null, sides: [], size: state.size }; render(); return; }
     if (t.dataset.size) { state.size = t.dataset.size; render(); return; }
     if (t.disabled) return;

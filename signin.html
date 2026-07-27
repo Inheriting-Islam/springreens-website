@@ -15,6 +15,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png"><link rel="icon" type="image/png" sizes="180x180" href="assets/brand/favicon-180.png"><link rel="apple-touch-icon" href="assets/brand/favicon-180.png"><link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/cart.css">
+<link rel="stylesheet" href="assets/forms.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -45,16 +47,7 @@
 </section>
 <section class="section surface">
   <div class="wrap" style="max-width:760px">
-    <div class="stub-cta reveal">
-      <div class="big-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/></svg></div>
-      <h2>Sign in to your Springreens account</h2>
-      <p class="lead" style="margin-top:14px">Members can sign in to save favorite orders, breeze through checkout, and earn VIP perks. Your account lives on our ordering system today — on the new site you'll sign in right here.</p>
-      <div class="hero-cta" style="justify-content:center;margin-top:26px">
-        <a class="btn btn-accent btn-lg" href="order.html">Sign In &amp; Order</a>
-        <a class="btn btn-ghost btn-lg" href="vip.html">Become a VIP</a>
-      </div>
-      <span class="proto-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 8v5M12 16h.01"/><circle cx="12" cy="12" r="9"/></svg> Native account sign-in — coming with the new site</span>
-    </div>
+    <div id="signin-app" data-base="assets/"></div>
     <div class="value-grid mt-l" style="grid-template-columns:1fr 1fr 1fr">
       <div class="value reveal"><div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div><h3>Saved favorites</h3><p>Reorder the plates you love in a tap.</p></div>
       <div class="value reveal" data-d="1"><div class="v-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div><h3>Faster checkout</h3><p>Your details, ready to go.</p></div>
@@ -74,6 +67,8 @@
 </footer>
 <div class="mobile-bar"><a class="btn btn-accent" href="order.html">Order Online</a><a class="btn btn-clay" href="catering.html">Catering</a></div>
 <script src="assets/site.js" defer></script>
+<script src="assets/cart-core.js" defer></script>
+<script src="assets/flows.js" defer></script>
 <script src="assets/switcher.js" defer></script>
 <script src="assets/vip-popin.js" defer></script>
 </body>

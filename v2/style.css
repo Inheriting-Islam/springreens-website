@@ -232,9 +232,9 @@ strong{font-weight:700}
 .diet-filter button:hover{border-color:var(--green);color:var(--green)}
 .diet-filter button.on{background:var(--green);color:var(--on-green);border-color:var(--green)}
 /* Build-Your-Plate theming (Fresh Market) */
-#plate-builder,#order-app{--pb-accent:#1E7A4B;--pb-on:#fff;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--ink);--pb-soft:var(--soft);--pb-line:var(--line);--pb-plate:#FFFFFF;--pb-serif:var(--disp)}
-:root[data-theme="dark"] #plate-builder,#order-app{--pb-accent:#2E9C63;--pb-plate:#ECE4D2}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #plate-builder,#order-app{--pb-accent:#2E9C63;--pb-plate:#ECE4D2}}
+body,#plate-builder,#order-app{--pb-accent:#1E7A4B;--pb-on:#fff;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--ink);--pb-soft:var(--soft);--pb-line:var(--line);--pb-plate:#FFFFFF;--pb-serif:var(--disp)}
+:root[data-theme="dark"] body,#plate-builder,#order-app{--pb-accent:#2E9C63;--pb-plate:#ECE4D2}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body,#plate-builder,#order-app{--pb-accent:#2E9C63;--pb-plate:#ECE4D2}}
 @keyframes sr-kenburns{0%{transform:scale(1.02)}100%{transform:scale(1.09)}}
 @media(prefers-reduced-motion:no-preference){.hero-media .shot img{animation:sr-kenburns 22s ease-in-out infinite alternate}}
 /* menu item thumbnails */

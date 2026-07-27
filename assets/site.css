@@ -444,9 +444,9 @@ strong{font-weight:800}
 .diet-filter button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
 
 /* Build-Your-Plate theming (Soul Kitchen) */
-#plate-builder,#order-app{--pb-accent:#2F7A55;--pb-on:#fff;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--text);--pb-soft:var(--text-soft);--pb-line:var(--line);--pb-plate:#FBF6EC;--pb-serif:var(--font-display)}
-:root[data-theme="dark"] #plate-builder,#order-app{--pb-accent:#3E9B6C;--pb-plate:#EADFC9}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #plate-builder,#order-app{--pb-accent:#3E9B6C;--pb-plate:#EADFC9}}
+body,#plate-builder,#order-app{--pb-accent:#2F7A55;--pb-on:#fff;--pb-surface:var(--surface);--pb-bg:var(--bg);--pb-ink:var(--text);--pb-soft:var(--text-soft);--pb-line:var(--line);--pb-plate:#FBF6EC;--pb-serif:var(--font-display)}
+:root[data-theme="dark"] body,#plate-builder,#order-app{--pb-accent:#3E9B6C;--pb-plate:#EADFC9}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) body,#plate-builder,#order-app{--pb-accent:#3E9B6C;--pb-plate:#EADFC9}}
 
 /* signature hero motion */
 @keyframes sr-kenburns{0%{transform:scale(1.04)}100%{transform:scale(1.12)}}
