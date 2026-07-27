@@ -430,3 +430,7 @@ strong{font-weight:800}
 .site-header .brand-lock{color:var(--brand)}
 .footer-brand .brand-lock .brand-logo{width:204px;height:46px}
 @media (max-width:860px){.brand-lock .brand-logo{width:158px;height:36px}}
+
+.signin-link{display:inline-flex;align-items:center;font-weight:700;font-size:.9rem;padding:.5em .8em;border-radius:999px;color:inherit;opacity:.82;transition:opacity .2s}
+.signin-link:hover{opacity:1}
+@media(max-width:860px){.signin-link{display:none}}
